@@ -54,6 +54,7 @@ open class App() : Application() {
         ServiceLocator.context = base
         app.registerActivityLifecycleCallbacks(ActivityTracker)
 
+        Shell.enableVerboseLogging = true;
         Shell.setDefaultBuilder(Shell.Builder.create()
             .setFlags(Shell.FLAG_MOUNT_MASTER)
             .setInitializers(ShellInit::class.java)
